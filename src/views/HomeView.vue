@@ -1,18 +1,66 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <AppHeader class="header-section"></AppHeader>
+  <HeroSection class="hero-section"></HeroSection>
+  <div class="section1">
+    <AppEvents class="section1-left"></AppEvents>
+    <div class="section1-right">
+      <AppSchedule class="schedule"></AppSchedule>
+      <AppMap class="map"></AppMap>
+    </div>
   </div>
+  <AppPickups class="section2"></AppPickups>
+  <AppFooter class="footer-section"></AppFooter>
 </template>
-
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
+import { defineComponent } from "vue";
+import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import AppHeader from "@/components/AppHeader.vue";
+import AppFooter from "@/components/AppFooter.vue";
+import HeroSection from "@/components/HeroSection.vue";
+import AppEvents from "@/components/AppEvents.vue";
+import AppMap from "@/components/AppMap.vue";
+import AppPickups from "@/components/AppPickups.vue";
+import AppSchedule from "@/components/AppSchedule.vue";
 export default defineComponent({
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld,
+    AppHeader,
+    AppFooter,
+    HeroSection,
+    AppEvents,
+    AppMap,
+    AppPickups,
+    AppSchedule,
   },
 });
 </script>
+
+<style lang="scss">
+.header-section {
+  position: fixed;
+  z-index: 10;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  .section1-left {
+    border: 1px solid black;
+  }
+  .section1-right {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    .schedule {
+      border: 1px solid black;
+    }
+    .map {
+      border: 1px solid black;
+    }
+  }
+}
+</style>
