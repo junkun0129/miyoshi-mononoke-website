@@ -2,7 +2,9 @@
   <AppHeader class="header-section"></AppHeader>
   <HeroSection class="hero-section"></HeroSection>
   <div class="section1">
-    <AppEvents class="section1-left"></AppEvents>
+    <div class="section1-left">
+      <AppEvents class="events"></AppEvents>
+    </div>
     <div class="section1-right">
       <AppSchedule class="schedule"></AppSchedule>
       <AppMap class="map"></AppMap>
@@ -42,20 +44,35 @@ export default defineComponent({
 }
 
 .section1 {
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid black;
+  height: 500px;
+
   .section1-left {
     border: 1px solid black;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .events {
+      width: 90%;
+      height: 90%;
+      border: 1px solid black;
+    }
   }
   .section1-right {
+    width: 40%;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     justify-content: space-around;
     align-items: center;
     .schedule {
+      width: 80%;
       border: 1px solid black;
     }
     .map {
