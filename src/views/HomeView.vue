@@ -49,7 +49,7 @@ export default defineComponent({
   justify-content: space-around;
   align-items: center;
   border: 1px solid black;
-  height: 500px;
+  height: 700px;
 
   .section1-left {
     border: 1px solid black;
