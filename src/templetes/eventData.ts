@@ -36,6 +36,69 @@ export const eventData: eventDataTypes[] = [
     label: "museum",
     date: new Date(),
   },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
+  {
+    id: "sknksjn;asldk;als;asldk",
+    title: "夏休み企画展関連イベント冒険の書に挑戦してプレゼントをもらおう",
+    url: ";lkfjwefmpsoifjpos",
+    label: "museum",
+    date: new Date(),
+  },
 ];
 
 export const pickupsDataTempletes: pickupsDataTypes[] = [
@@ -49,7 +112,7 @@ export const pickupsDataTempletes: pickupsDataTypes[] = [
       { title: "湯本豪一氏のプロフィール", url: ";laskjglsjipfojs090" },
       { title: "コレクション紹介", url: ";;lkj;asldjfois" },
     ],
-    pictureUrl: "../assets/img/navi4.png",
+    pictureUrl: "/img/navi4.png",
   },
   {
     id: "2;asnfnfefnej",
@@ -61,7 +124,7 @@ export const pickupsDataTempletes: pickupsDataTypes[] = [
       { title: "所蔵資料紹介", url: ";laskjdf;oiso" },
       { title: "ゆかりの地", url: "as;ldnvofjsdoifj" },
     ],
-    pictureUrl: "../assets/img/navi3.png",
+    pictureUrl: "/img/navi3.png",
   },
   {
     id: "2;s;ldkffsdof",
@@ -73,6 +136,6 @@ export const pickupsDataTempletes: pickupsDataTypes[] = [
       { title: "回虫の怪電波六", url: ";laskjdf;oiso" },
       { title: "ろくろ首の真実", url: "as;ldnvofjsdoifj" },
     ],
-    pictureUrl: "../assets/img/navi2.png",
+    pictureUrl: "/img/navi2.png",
   },
 ];

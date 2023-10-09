@@ -66,6 +66,7 @@ export default defineComponent({
   }
   .section1-right {
     width: 40%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -74,8 +75,11 @@ export default defineComponent({
     .schedule {
       width: 80%;
       border: 1px solid black;
+      height: 40%;
     }
     .map {
+      height: 50%;
+
       border: 1px solid black;
     }
   }

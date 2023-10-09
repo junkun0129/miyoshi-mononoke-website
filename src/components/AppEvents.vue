@@ -68,10 +68,19 @@ export default defineComponent({
     font-size: 2rem;
   }
   .content {
+    width: 100%;
+    height: 90%;
     padding-left: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     .content-ul {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
       list-style-type: none;
       .content-li {
+        width: 100%;
+        height: 10%;
         margin: 20px;
         .event-detail {
           display: flex;

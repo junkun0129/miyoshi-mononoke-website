@@ -1,19 +1,32 @@
 <template>
   <div class="pickups-window">
-    <!-- <div class="pickups-container">
-      <div v-for="pickup in pickups" :key="pickup.id">
-        {{ pickup.title }}
-      </div>
-    </div> -->
-    <div class="slide-show">
-      <transition name="fade" mode="out-in">
-        <div :key="currentSlide" class="slide">
-          {{ pickups[currentSlide].title }}
+    <button @click="prevSlide">Previous</button>
+    <transition name="fade" mode="out-in">
+      <div class="slide-content">
+        <img
+          :src="pickups[currentSlide].pictureUrl"
+          class="slide-content-picture"
+        />
+        <div class="slide-content-description">
+          <div class="slide-content-description-title">
+            {{ pickups[currentSlide].title }}
+          </div>
+          <div class="slide-content-description-detail">
+            {{ pickups[currentSlide].detail }}
+          </div>
+          <div class="slide-content-description-links">
+            <a
+              v-for="url in pickups[currentSlide].relatedUrls"
+              :key="url.title"
+              :href="url.url"
+            >
+              @ {{ url.title }}
+            </a>
+          </div>
         </div>
-      </transition>
-      <button @click="prevSlide">Previous</button>
-      <button @click="nextSlide">Next</button>
-    </div>
+      </div>
+    </transition>
+    <button @click="nextSlide">Next</button>
   </div>
 </template>
 <script lang="ts">
@@ -24,6 +37,8 @@ export default defineComponent({
   setup() {
     const pickups = ref(pickupsDataTempletes);
     const currentSlide = ref(0);
+    console.log(pickupsDataTempletes[0].pictureUrl);
+
     return {
       pickups,
       slides: ["Slide 1", "Slide 2", "Slide 3"],
@@ -33,12 +48,10 @@ export default defineComponent({
   methods: {
     nextSlide() {
       this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-      console.log("next");
     },
     prevSlide() {
       this.currentSlide =
         (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-      console.log("pre");
     },
   },
 });
@@ -48,21 +61,41 @@ export default defineComponent({
   width: 100vw;
   height: 400px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  .pickups-container {
-    width: 90%;
+
+  .slide-content {
+    width: 80%;
     height: 90%;
-    border: 1px black solid;
-  }
-  .slide-show {
-    text-align: center;
-    position: relative;
-  }
-  .slide {
-    display: inline-block;
-    padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
+    display: flex;
+    .slide-content-picture {
+      width: 50%;
+      height: 100%;
+      background-color: aquamarine;
+    }
+    .slide-content-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .slide-content-description-title {
+        font-size: 2rem;
+      }
+      .slide-content-description-detail {
+        width: 80%;
+      }
+      .slide-content-description-links {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        // align-items: center;
+      }
+    }
   }
   .fade-enter-active,
   .fade-leave-active {
