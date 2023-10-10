@@ -11,6 +11,7 @@
     </div>
   </div>
   <AppPickups class="section2"></AppPickups>
+  <AppRelatedLinks></AppRelatedLinks>
   <AppFooter class="footer-section"></AppFooter>
 </template>
 <script lang="ts">
@@ -23,6 +24,8 @@ import AppEvents from "@/components/AppEvents.vue";
 import AppMap from "@/components/AppMap.vue";
 import AppPickups from "@/components/AppPickups.vue";
 import AppSchedule from "@/components/AppSchedule.vue";
+import AppRelatedLinks from "@/components/AppRelatedLinks.vue";
+
 export default defineComponent({
   name: "HomeView",
   components: {
@@ -33,6 +36,7 @@ export default defineComponent({
     AppMap,
     AppPickups,
     AppSchedule,
+    AppRelatedLinks,
   },
 });
 </script>
@@ -48,11 +52,11 @@ export default defineComponent({
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
+  // border: 1px solid black;
   height: 700px;
 
   .section1-left {
-    border: 1px solid black;
+    // border: 1px solid black;
     width: 60%;
     height: 100%;
     display: flex;
@@ -61,7 +65,7 @@ export default defineComponent({
     .events {
       width: 90%;
       height: 90%;
-      border: 1px solid black;
+      // border: 1px solid black;
     }
   }
   .section1-right {
@@ -69,18 +73,18 @@ export default defineComponent({
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    // border: 1px solid black;
     justify-content: space-around;
     align-items: center;
     .schedule {
       width: 80%;
-      border: 1px solid black;
+      // border: 1px solid black;
       height: 40%;
     }
     .map {
       height: 50%;
 
-      border: 1px solid black;
+      // border: 1px solid black;
     }
   }
 }

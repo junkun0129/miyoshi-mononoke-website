@@ -51,7 +51,7 @@ export default defineComponent({
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "wahu";
+  // font-family: "wahu";
 }
 body::-webkit-scrollbar {
   display: none;
@@ -80,6 +80,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     width: 10%;
     height: 50%;
+    font-family: "wahu";
     .text1 {
     }
     .text2 {

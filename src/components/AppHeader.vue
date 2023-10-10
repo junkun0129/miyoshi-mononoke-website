@@ -17,30 +17,45 @@
       </svg>
     </div>
     <div class="menu-contents">
-      <MenuContainer1></MenuContainer1>
-      <MenuContainer2></MenuContainer2>
-      <MenuContainer3></MenuContainer3>
-      <MenuContainer4></MenuContainer4>
+      <MenuContainer
+        :svgCode="menu1LogoCode"
+        :label="'アクセス'"
+      ></MenuContainer>
+      <MenuContainer
+        :svgCode="menu2LogoCode"
+        :label="'フロアガイド'"
+      ></MenuContainer>
+      <MenuContainer
+        :svgCode="menu3LogoCode"
+        :label="'お問い合わせ'"
+      ></MenuContainer>
+      <MenuContainer
+        :svgCode="menu4LogoCode"
+        :label="'お買い物'"
+      ></MenuContainer>
     </div>
-    <AllMenuContainer class="menu-bar"></AllMenuContainer>
+    <!-- <AllMenuContainer class="menu-bar"></AllMenuContainer> -->
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import MenuContainer1 from "@/components/SVGcomponents/MenuContainer1.vue";
-import MenuContainer2 from "@/components/SVGcomponents/MenuContainer2.vue";
-import MenuContainer3 from "@/components/SVGcomponents/MenuContainer3.vue";
-import MenuContainer4 from "@/components/SVGcomponents/MenuContainer4.vue";
-import AllMenuContainer from "@/components/SVGcomponents/AllMenuContainer.vue";
+import MenuContainer from "@/components/SVGcomponents/MenuContainer.vue";
+import {
+  menu1LogoCode,
+  menu2LogoCode,
+  menu3LogoCode,
+  menu4LogoCode,
+} from "@/assets/svgCodes";
+// import AllMenuContainer from "@/components/SVGcomponents/AllMenuContainer.vue";
 export default defineComponent({
   name: "AppHeader",
   components: {
-    MenuContainer1,
-    MenuContainer2,
-    MenuContainer3,
-    MenuContainer4,
-    AllMenuContainer,
+    MenuContainer,
+    // AllMenuContainer,
+  },
+  setup() {
+    return { menu1LogoCode, menu2LogoCode, menu3LogoCode, menu4LogoCode };
   },
 });
 </script>

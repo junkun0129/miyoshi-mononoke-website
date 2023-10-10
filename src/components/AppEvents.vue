@@ -66,6 +66,7 @@ export default defineComponent({
   .events-title {
     padding: 15px;
     font-size: 2rem;
+    font-family: "wahu";
   }
   .content {
     width: 100%;

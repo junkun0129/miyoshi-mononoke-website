@@ -67,7 +67,7 @@ export default defineComponent({
   .slide-content {
     width: 80%;
     height: 90%;
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     .slide-content-picture {
       width: 50%;

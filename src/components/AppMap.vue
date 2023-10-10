@@ -4,11 +4,20 @@
     <div id="mapContainer" class="mapcontainer"></div>
     <div class="map-details">
       <article class="map-details-closeday">
-        <h6>閉館時間</h6>
-        <p></p>
+        <h6>休館日</h6>
+        <p>月曜</p>
       </article>
-      <article class="map-details-opentimes">開館時間</article>
-      <article class="map-details-entrancefee">入館料</article>
+      <article class="map-details-opentimes">
+        <h6>開館時間</h6>
+        <p>
+          10:00～17:00<br />
+          10:00～21:00(6/1～10/31の金曜)
+        </p>
+      </article>
+      <article class="map-details-entrancefee">
+        <h6>入場料</h6>
+        <p>480円</p>
+      </article>
     </div>
   </div>
 </template>
@@ -54,12 +63,28 @@ export default defineComponent({
   }
 
   .map-details {
-    .map-details-closeday {
-      h6 {
-        font-size: 1.4rem;
-      }
-      p {
-      }
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    article {
+      // border: 1px solid black;
+      display: flex;
+      width: 90%;
+      height: 25%;
+    }
+    h6 {
+      width: 30%;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      display: flex;
+      align-items: center;
     }
   }
 }

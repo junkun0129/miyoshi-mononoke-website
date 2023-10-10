@@ -8,5 +8,6 @@
 
 <style>
 #app {
+  background-image: url("./assets/img/washi.jpg");
 }
 </style>
