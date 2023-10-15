@@ -63,6 +63,8 @@ export default defineComponent({
 .events-window {
   width: 100%;
   height: 100%;
+  background-color: rgb(255, 255, 255, 0.5);
+
   .events-title {
     padding: 15px;
     font-size: 2rem;
@@ -70,18 +72,21 @@ export default defineComponent({
   }
   .content {
     width: 100%;
-    height: 90%;
+    height: 85%;
     padding-left: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    .content-ul::-webkit-scrollbar {
+      width: 0px; /* スクロールバーの幅 */
+    }
     .content-ul {
-      width: 100%;
+      width: 80%;
       height: 100%;
       overflow: scroll;
       list-style-type: none;
       .content-li {
         width: 100%;
-        height: 10%;
+        // height: 10%;
         margin: 20px;
         .event-detail {
           display: flex;

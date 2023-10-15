@@ -11,7 +11,7 @@
     </div>
   </div>
   <AppPickups class="section2"></AppPickups>
-  <AppRelatedLinks></AppRelatedLinks>
+  <AppRelatedLinks class="section3"></AppRelatedLinks>
   <AppFooter class="footer-section"></AppFooter>
 </template>
 <script lang="ts">
@@ -46,46 +46,102 @@ export default defineComponent({
   position: fixed;
   z-index: 10;
 }
-
-.section1 {
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  // border: 1px solid black;
-  height: 700px;
-
-  .section1-left {
-    // border: 1px solid black;
-    width: 60%;
-    height: 100%;
+@media screen and (min-width: 768px) {
+  .section1 {
+    width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    .events {
-      width: 90%;
-      height: 90%;
-      // border: 1px solid black;
-    }
-  }
-  .section1-right {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    // border: 1px solid black;
     justify-content: space-around;
     align-items: center;
-    .schedule {
-      width: 80%;
+    // border: 1px solid black;
+    height: 700px;
+    margin: 50px 0;
+    .section1-left {
       // border: 1px solid black;
-      height: 40%;
+      width: 60%;
+      height: 70%;
+      align-self: self-start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .events {
+        width: 90%;
+        height: 90%;
+        // border: 1px solid black;
+      }
     }
-    .map {
-      height: 50%;
-
+    .section1-right {
+      width: 40%;
+      // height: 100%;
+      display: flex;
+      flex-direction: column;
       // border: 1px solid black;
+      justify-content: space-around;
+      align-items: center;
+      .schedule {
+        width: 80%;
+        // border: 1px solid black;
+        // height: 40%;
+      }
+      .map {
+        // height: 50%;
+
+        // border: 1px solid black;
+      }
     }
   }
+}
+
+@media screen and (max-width: 767px) {
+  .section1 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    // border: 1px solid black;
+    height: 1100px;
+
+    .section1-left {
+      // border: 1px solid black;
+      width: 90%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .events {
+        width: 90%;
+        height: 90%;
+        // border: 1px solid black;
+      }
+    }
+    .section1-right {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid black;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 70px;
+      .schedule {
+        width: 80%;
+        // border: 1px solid black;
+        height: 40%;
+      }
+      .map {
+        height: 50%;
+
+        // border: 1px solid black;
+      }
+    }
+  }
+}
+
+.section2 {
+  margin: 50px 0;
+}
+
+.section3 {
+  margin: 50px 0;
 }
 </style>

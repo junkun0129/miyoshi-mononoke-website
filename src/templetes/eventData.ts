@@ -1,4 +1,9 @@
-import { eventDataTypes, pickupsDataTypes } from "@/types";
+import {
+  eventDataTypes,
+  pickupsDataTypes,
+  relatedContentsDataType,
+  relatedUrlsDataType,
+} from "@/types";
 
 export const eventData: eventDataTypes[] = [
   {
@@ -138,4 +143,19 @@ export const pickupsDataTempletes: pickupsDataTypes[] = [
     ],
     pictureUrl: "/img/navi2.png",
   },
+];
+
+export const relatedLinks: relatedContentsDataType[] = [
+  { title: "博物館", url: "", pictureUrl: "img/navi2.png" },
+  { title: "チームラボ", url: "", pictureUrl: "img/navi3.png" },
+  { title: "企画展", url: "", pictureUrl: "img/navi4.png" },
+  { title: "博物館利用案内", url: "", pictureUrl: "img/navi2.png" },
+  {
+    title: "ミュージアムショップ",
+    url: "",
+    pictureUrl: "img/navi3.png",
+  },
+  { title: "交流館利用案内", url: "", pictureUrl: "img/navi4.png" },
+  { title: "アクセス", url: "", pictureUrl: "img/navi2.png" },
+  { title: "じゃらーん", url: "", pictureUrl: "img/navi3.png" },
 ];

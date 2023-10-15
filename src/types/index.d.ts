@@ -21,3 +21,9 @@ export type relatedUrlsDataType = {
   title: string;
   url: string;
 };
+
+export type relatedContentsDataType = {
+  title: string;
+  url: string;
+  pictureUrl: string;
+};

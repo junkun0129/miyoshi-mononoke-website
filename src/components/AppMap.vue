@@ -51,20 +51,26 @@ export default defineComponent({
 <style lang="scss">
 .map-window {
   width: 80%;
-  height: 100%;
+  // height: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: rgb(255, 255, 255, 0.5);
 
+  padding: 10px;
   .map-title {
+    font-family: "wahu";
+    font-size: 2rem;
+    margin: 10px;
   }
   .mapcontainer {
-    height: 60%;
+    // height: 60%;
     width: 100%;
+    margin-bottom: 5px;
   }
 
   .map-details {
     width: 100%;
-    height: 35%;
+    // height: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -73,14 +79,15 @@ export default defineComponent({
       // border: 1px solid black;
       display: flex;
       width: 90%;
-      height: 25%;
+      // height: 25%;
+      margin: 5px 0;
     }
     h6 {
       width: 30%;
       font-size: 1.4rem;
       display: flex;
-      justify-content: center;
       align-items: center;
+      font-family: "wahu";
     }
     p {
       display: flex;

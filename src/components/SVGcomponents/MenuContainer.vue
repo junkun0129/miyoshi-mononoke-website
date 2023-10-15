@@ -1,6 +1,6 @@
 <template>
   <div class="window-menucontainer">
-    <div class="menucontainer-title" v-html="svgCode"></div>
+    <div class="menucontainer-logo" v-html="svgCode"></div>
     <h4 class="menucontainer-title">{{ label }}</h4>
   </div>
 </template>

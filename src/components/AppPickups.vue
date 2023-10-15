@@ -1,6 +1,6 @@
 <template>
   <div class="pickups-window">
-    <button @click="prevSlide">Previous</button>
+    <button @click="prevSlide" class="arrow-left"></button>
     <transition name="fade" mode="out-in">
       <div class="slide-content">
         <img
@@ -26,7 +26,7 @@
         </div>
       </div>
     </transition>
-    <button @click="nextSlide">Next</button>
+    <button @click="nextSlide" class="arrow-right"></button>
   </div>
 </template>
 <script lang="ts">
@@ -63,7 +63,26 @@ export default defineComponent({
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  background-color: rgb(255, 255, 255, 0.6);
+  .arrow-left {
+    width: 70px;
+    height: 70px;
+    background: none;
+    background-image: url("../assets//img/arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .arrow-right {
+    width: 70px;
+    height: 70px;
+    transform: rotate(180deg);
+    background: none;
+    background-image: url("../assets//img/arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .slide-content {
     width: 80%;
     height: 90%;
@@ -83,6 +102,7 @@ export default defineComponent({
       height: 100%;
       .slide-content-description-title {
         font-size: 2rem;
+        font-family: "wahu";
       }
       .slide-content-description-detail {
         width: 80%;
