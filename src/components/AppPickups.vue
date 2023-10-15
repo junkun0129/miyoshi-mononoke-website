@@ -63,7 +63,6 @@ export default defineComponent({
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(255, 255, 255, 0.6);
   .arrow-left {
     width: 70px;
     height: 70px;

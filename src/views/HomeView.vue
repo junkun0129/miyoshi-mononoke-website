@@ -1,18 +1,24 @@
 <template>
-  <AppHeader class="header-section"></AppHeader>
-  <HeroSection class="hero-section"></HeroSection>
-  <div class="section1">
-    <div class="section1-left">
-      <AppEvents class="events"></AppEvents>
+  <div class="main-window">
+    <AppHeader class="header-section"></AppHeader>
+    <HeroSection class="hero-section"></HeroSection>
+    <div class="section1">
+      <div class="bird-youkai"></div>
+      <div class="runaway-youkai"></div>
+      <div class="two-youkai"></div>
+      <div class="weasel-youkai"></div>
+      <div class="section1-left">
+        <AppEvents class="events"></AppEvents>
+      </div>
+      <div class="section1-right">
+        <AppSchedule class="schedule"></AppSchedule>
+        <AppMap class="map"></AppMap>
+      </div>
     </div>
-    <div class="section1-right">
-      <AppSchedule class="schedule"></AppSchedule>
-      <AppMap class="map"></AppMap>
-    </div>
+    <AppPickups class="section2"></AppPickups>
+    <AppRelatedLinks class="section3"></AppRelatedLinks>
+    <AppFooter class="footer-section"></AppFooter>
   </div>
-  <AppPickups class="section2"></AppPickups>
-  <AppRelatedLinks class="section3"></AppRelatedLinks>
-  <AppFooter class="footer-section"></AppFooter>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -46,6 +52,9 @@ export default defineComponent({
   position: fixed;
   z-index: 10;
 }
+.main-window {
+  z-index: 2;
+}
 @media screen and (min-width: 768px) {
   .section1 {
     width: 100vw;
@@ -55,7 +64,58 @@ export default defineComponent({
     // border: 1px solid black;
     height: 700px;
     margin: 50px 0;
+    position: relative;
+    .bird-youkai {
+      position: absolute;
+      background-image: url("../assets/img/bird-youkai.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 700px;
+      height: 400px;
+      bottom: -70px;
+      right: 100px;
+      z-index: 1;
+      transform: rotate(-10deg);
+    }
+    .runaway-youkai {
+      position: absolute;
+      background-image: url("../assets/img/runaway-youkai.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 250px;
+      height: 250px;
+      bottom: -90px;
+      left: 300px;
+      z-index: 1;
+    }
+    .two-youkai {
+      position: absolute;
+      background-image: url("../assets/img/two-youkai.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 250px;
+      height: 250px;
+      bottom: -90px;
+      left: 100px;
+      z-index: 1;
+    }
+    .weasel-youkai {
+      position: absolute;
+      background-image: url("../assets/img/weasel-youkai.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 250px;
+      height: 250px;
+      bottom: -90px;
+      right: 100px;
+      z-index: 1;
+    }
     .section1-left {
+      z-index: 2;
       // border: 1px solid black;
       width: 60%;
       height: 70%;
@@ -66,6 +126,8 @@ export default defineComponent({
       .events {
         width: 90%;
         height: 90%;
+        background-color: rgb(255, 255, 255, 0.7);
+
         // border: 1px solid black;
       }
     }
@@ -77,13 +139,16 @@ export default defineComponent({
       // border: 1px solid black;
       justify-content: space-around;
       align-items: center;
+      z-index: 2;
       .schedule {
         width: 80%;
         // border: 1px solid black;
         // height: 40%;
+        background-color: rgb(255, 255, 255, 0.7);
       }
       .map {
         // height: 50%;
+        background-color: rgb(255, 255, 255, 0.7);
 
         // border: 1px solid black;
       }
@@ -139,6 +204,7 @@ export default defineComponent({
 
 .section2 {
   margin: 50px 0;
+  background-color: rgb(255, 255, 255, 0.7);
 }
 
 .section3 {

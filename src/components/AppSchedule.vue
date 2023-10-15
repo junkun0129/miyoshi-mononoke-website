@@ -114,7 +114,6 @@ export default {
 <style lang="scss">
 .calendar {
   text-align: center;
-  background-color: rgb(255, 255, 255, 0.5);
 
   /* margin: 10px; */
   h2 {

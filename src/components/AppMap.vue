@@ -54,7 +54,6 @@ export default defineComponent({
   // height: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: rgb(255, 255, 255, 0.5);
 
   padding: 10px;
   .map-title {

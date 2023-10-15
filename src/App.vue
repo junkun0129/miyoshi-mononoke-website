@@ -6,7 +6,7 @@
   <router-view />
 </template>
 
-<style>
+<style lang="scss">
 #app {
   background-image: url("./assets/img/washi.jpg");
 }
