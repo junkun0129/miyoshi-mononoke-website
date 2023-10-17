@@ -3,10 +3,38 @@
     <AppHeader class="header-section"></AppHeader>
     <HeroSection class="hero-section"></HeroSection>
     <div class="section1">
-      <div class="bird-youkai"></div>
-      <div class="runaway-youkai"></div>
-      <div class="two-youkai"></div>
-      <div class="weasel-youkai"></div>
+      <YoukaiComponent
+        url="img/bird-youkai.png"
+        width="700"
+        height="400"
+        bottom="-100"
+        right="100"
+        show="web"
+      ></YoukaiComponent>
+      <YoukaiComponent
+        url="img/runaway-youkai.png"
+        width="300"
+        height="150"
+        bottom="-50"
+        left="300"
+        show="web"
+      ></YoukaiComponent>
+      <YoukaiComponent
+        url="img/two-youkai.png"
+        width="200"
+        height="200"
+        bottom="-100"
+        left="10"
+        show="web"
+      ></YoukaiComponent>
+      <YoukaiComponent
+        url="img/weasel-youkai.png"
+        width="200"
+        height="200"
+        bottom="-100"
+        left="170"
+        show="web"
+      ></YoukaiComponent>
       <div class="section1-left">
         <AppEvents class="events"></AppEvents>
       </div>
@@ -31,6 +59,7 @@ import AppMap from "@/components/AppMap.vue";
 import AppPickups from "@/components/AppPickups.vue";
 import AppSchedule from "@/components/AppSchedule.vue";
 import AppRelatedLinks from "@/components/AppRelatedLinks.vue";
+import YoukaiComponent from "@/components/stylecomponents/YoukaiComponent.vue";
 
 export default defineComponent({
   name: "HomeView",
@@ -43,6 +72,7 @@ export default defineComponent({
     AppPickups,
     AppSchedule,
     AppRelatedLinks,
+    YoukaiComponent,
   },
 });
 </script>
@@ -65,55 +95,7 @@ export default defineComponent({
     height: 700px;
     margin: 50px 0;
     position: relative;
-    .bird-youkai {
-      position: absolute;
-      background-image: url("../assets/img/bird-youkai.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 700px;
-      height: 400px;
-      bottom: -70px;
-      right: 100px;
-      z-index: 1;
-      transform: rotate(-10deg);
-    }
-    .runaway-youkai {
-      position: absolute;
-      background-image: url("../assets/img/runaway-youkai.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 250px;
-      height: 250px;
-      bottom: -90px;
-      left: 300px;
-      z-index: 1;
-    }
-    .two-youkai {
-      position: absolute;
-      background-image: url("../assets/img/two-youkai.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 250px;
-      height: 250px;
-      bottom: -90px;
-      left: 100px;
-      z-index: 1;
-    }
-    .weasel-youkai {
-      position: absolute;
-      background-image: url("../assets/img/weasel-youkai.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 250px;
-      height: 250px;
-      bottom: -90px;
-      right: 100px;
-      z-index: 1;
-    }
+
     .section1-left {
       z-index: 2;
       // border: 1px solid black;

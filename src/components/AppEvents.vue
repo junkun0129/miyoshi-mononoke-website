@@ -1,6 +1,6 @@
 <template>
   <section class="events-window">
-    <div class="firecat-youkai"></div>
+    <!-- <div class="firecat-youkai"></div> -->
     <h1 class="events-title">新着情報</h1>
     <article class="content">
       <ul class="content-ul">
@@ -65,17 +65,7 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   position: relative;
-  .firecat-youkai {
-    position: absolute;
-    background-image: url("../assets/img/firecat-youkai.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 200px;
-    height: 400px;
-    right: 0;
-    top: -50px;
-  }
+
   .events-title {
     padding: 15px;
     font-size: 2rem;
